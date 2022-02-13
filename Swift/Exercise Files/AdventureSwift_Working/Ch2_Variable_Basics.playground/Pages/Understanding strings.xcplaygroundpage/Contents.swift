@@ -14,10 +14,12 @@
  
  */
 // Declaring strings
-
+var activeQuest: String = "Retireving the Cart!" // Actual value - literal vs the var holding the value
+print(activeQuest)
 
 // Concatenation
-
+var questDifficulty = "Nightmare"
+var questInfo = activeQuest + " -> " + questDifficulty
 
 // String interpolation
 

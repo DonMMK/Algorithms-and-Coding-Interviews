@@ -14,13 +14,16 @@
  [Previous Topic](@previous)                                                 [Next Topic](@next)
  
 */
-// Type inference
-
+// Type inference - it's a type safe language
+var currentHealth = 90
 
 // Type annotation
-
+var characterName : String
+characterName = "King Krull"
 
 // Type annotation + inference
-
+var macxHealth: Int = 100
 
 // Multiple variables - type annotation shorthand
+var inventoryItems, equipmentSlots, currentGold: Int
+
