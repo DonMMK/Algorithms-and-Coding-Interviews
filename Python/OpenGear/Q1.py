@@ -1,25 +1,36 @@
-import numpy as np
-import scipy as sp
-import pandas as pd
-import sklearn
+class DocumentStore(object):
+       
+    def __init__(self, capacity):
+        self._capacity = capacity
+        self._documents = []
 
+    @property
+    def capacity(self):
+        return self._capacity
 
-ser = pd.Series()
-print('{}\n'.format(ser))
+    # Return a list containing all documents in the store
+    # There should be no way to modify the list returned by this method
+    @property
+    def documents(self):
+        for i in range(len(self._documents)):
+            self._documents.append(self._documents[i])
+            
+        return self._documents
 
-ser = pd.Series(10)
-print('{}\n'.format(ser))
+    # Add a new document to the store 
+    # If the document store is full, an exception should be raised
+    def add_document(self, document):
+        if(len(self._documents) > self._capacity):
+            raise Exception("Document store is full") 
+        else:
+            self._documents.append(document)
+            return self._documents
+    
+    def __repr__(self):
+        #return "Document store: " + getsizeof(self._documents) + "/" + self._capacity
+        return "Placeholder" 
 
-ser = pd.Series([0, 10, 20, 30, 40, 50, 60, 70, 80, 90])
-print('{}\n'.format(ser))
-
-ser = pd.Series([20, 15.7, '10'])
-print('{}\n'.format(ser))
-
-# A series from a numpy array
-arr = np.array([0, 10, 20, 30, 40, 50])
-ser = pd.Series(arr, dtype = np.double)
-print('{}\n'.format(ser))
-
-ser = pd.Series([[15, 4], [89, 23.5], [21, 22]])
-print('{}\n'.format(ser))
+#To see the output, uncomment the lines belows:
+document_store = DocumentStore(2)
+document_store.add_document("document")
+print(document_store)
