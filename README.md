@@ -1,7 +1,7 @@
 <h2>
- Self-Assigned-Projects
+Algorithms and Coding Interviews
 </h2>
  
  <h4>
- Once fully completed or if big enough will be published as standalone repo
+Prep for coding interviews
  </h4>
