@@ -31,7 +31,7 @@ namespace programming_challenge
 		private string translateEnglishToPigLatin(string english)
 		{
 			// TODO
-			return "";
+			return english;
 		}
 
 		private void testEquals(string input, string expect, string actual)
