@@ -19,6 +19,14 @@ import sys
 
 def findNumber(arr, k):
     # Write your code here
+    to_be_searched = k
+    print(to_be_searched)
+    for i in arr:
+        print(i)
+        if i == to_be_searched:
+            return 'YES'
+        else:
+            return 'NO'
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
